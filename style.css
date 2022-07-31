@@ -6,6 +6,7 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/* display the whole page in flex/column with margins */
 .container {
     display: flex;
     flex-direction: column;
@@ -14,6 +15,7 @@
     max-width: 70%;
 }
 
+/* section one: header & hero */
 .section-one {
     background-color: #1F2937;
 }
@@ -22,9 +24,10 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 1em;
+    margin-top: 40px;
 }
 
+/* allow the header to be responsive: header-links pass under header-logo */
 @media screen and (max-width: 1200px) {
     .header {
         flex-wrap: wrap;
@@ -35,15 +38,22 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .header-logo {
+        padding-bottom: 15px;
+    }
+}
+
+
 .header-logo {
-    font-size: 1.5em;
+    font-size: 24px;
     font-weight: 800;
     color: #F9FAF8;
 }
 
 .header-links, a {
     display: flex;
-    font-size: 1.125em;
+    font-size: 18px;
     font-weight: 100;
     color: #E5E7EB;
     gap: 25px;
@@ -54,18 +64,21 @@
     text-align: left;
     width: 100%;
     justify-content: space-between;
-    margin: 100px auto;
+    margin: 120px auto;
     gap: 80px;
 }
 
+/* allow the hero (text & image) to be responsive when screen is under 1200px, and wrap */
 @media screen and (max-width: 1200px) {
     .hero, .hero-left {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
         align-items: center;
+        max-width: fit-content;
     }
 }
+
 
 .hero-left {
     display: flex;
@@ -74,32 +87,153 @@
 }
 
 .hero-title {
-    font-size: 3em;
+    font-size: 48px;
+    font-weight: 800;
     color: #F9FAF8;
 }
 
 .hero-text {
     font-size: 18px;
     color:#E5E7EB;
+    padding: 15px 0px;
 }
 
 .hero-right {
     height: 300px;
     width: auto;
+    border-radius: 12px;
 }
 
 .hero-button {
     width: fit-content;
 }
 
+/* button design */
 button {
     background-color:#3882F6;
     border-radius: 8px;
     border: none;
     color: #F9FAF8;
     font-weight: 800;
+    font-size: 18px;
 }
 
+/* specificities of hero button */
 .hero-button {
     padding: 8px 24px;
+}
+
+/* section two: informations & illustrations  */
+
+.section-two-title {
+    padding: 60px 0;
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+}
+
+.image {
+    width: 180px;
+    height: 180px;
+    border: 3px solid #3882F6;
+    border-radius: 12px;
+    margin: auto;
+}
+
+.section-two-cards {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 120px;
+    gap: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+    .section-two-cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section-two-title {
+        text-align: center;
+    }
+}
+
+.subtext {
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    max-width: 180px;
+}
+
+.section-three {
+    background-color: #E5E7EB;
+}
+.section-three > .container {
+    max-width: 50%;
+}
+
+
+.quote {
+    font-size:calc(12px + 1.5vw);
+    font-weight: 100;
+    font-style: italic;
+    color: #1F2937;
+    padding-top: 120px;
+}
+
+.author {
+    font-size:calc(12px + 0.4vw);
+    font-weight: 800;
+    text-align: right;
+    padding: 15px 0 120px 0;
+    align-self: flex-end;
+}
+
+#ital {
+    font-style: italic;
+    justify-content: right;
+}
+
+.section-four > .container {
+    padding: 90px 0;
+}
+
+.call-to-action {
+    padding: 40px 80px;
+    border-radius: 12px;
+    display: flex;
+    background-color: #3882F6;
+    color:#F9FAF8;
+    justify-content: space-between;
+    width: 70%;
+    gap: 25px;
+    align-items: center;
+}
+
+.button-title {
+    font-size:calc(12px + 0.8vw);
+    font-weight: 800;
+}
+
+.button-text {
+    font-size:calc(12px + 0.4vw);
+    font-weight: 100;
+}
+
+.cta-button {
+    border: 2px solid #F9FAF8;
+    flex-shrink: 0;
+    padding: 1.4vh 3.5vh;
+    font-size:calc(12px + 0.4vw);
+}
+
+.footer {
+    font-size:calc(12px + 0.4vw);
+    font-style: italic;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 40px 0;
 }
