@@ -1,178 +1,105 @@
 * {
     text-decoration: none;
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;   
+    max-width: 70%;
+}
+
+.section-one {
+    background-color: #1F2937;
 }
 
 .header {
     display: flex;
-    align-items: center;
-    text-align: center;
+    width: 100%;
     justify-content: space-between;
-    padding: 20px 350px 0 350px;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .header-logo {
-    font-size: 24px;
-    font-weight: 900;
-    color: #F9FAF8
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #F9FAF8;
 }
 
 .header-links, a {
     display: flex;
-    font-size: 18px;
-    gap: 18px;
+    font-size: 1.125em;
+    font-weight: 100;
     color: #E5E7EB;
+    gap: 25px;
 }
 
-.main {
+.hero {
     display: flex;
-    align-items: center;
     text-align: left;
+    width: 100%;
     justify-content: space-between;
-    padding: 100px 350px 100px 350px;
+    margin: 100px auto;
     gap: 80px;
 }
 
-.main-title {
-    font-size: 48px;
-    font-weight: 900;
-    color: #F9FAF8
+@media screen and (max-width: 1200px) {
+    .hero, .hero-left {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
 }
 
-.main-text {
-    font-size: 21px;
-    font-weight: 400;
-    padding: 12px 0;
-    color: #E5E7EB;
-}
-
-.main-image {
-    width: 600px;
-    height: auto;
-    border-radius: 8px;
-}
-
-
-
-.button-main {
-    background-color: #3882F6;
-    border: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 900;
-    border-radius: 8px;
-    padding: 8px 32px;
-}
-
-.header, .main {
-    background-color: #1F2937;
-}
-
-
-.secondary {
+.hero-left {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-}
-
-.secondary-title {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 900;
-    color: #1F2937;
-    padding: 50px 0;
-}
-
-.secondary-container {
-    display: flex;
     justify-content: center;
-    gap: 52px;
-    flex-wrap: wrap;
 }
 
-.image {
-    width: 150px;
-    height: 150px;
-    border: 4px solid #3882F6;
-    border-radius: 12px;
+.hero-title {
+    font-size: 3em;
+    color: #F9FAF8;
 }
 
-.subtext {
-    text-align: center;
-    padding: 12px 0;
-    max-width: 150px;
-    color: #4B5563;
-    padding: 10px 0 100px 0;
-}
-
-
-
-.quote-section {
-    padding: 120px 550px;
-    background-color: #E5E7EB;   
-}
-
-.quote-text {
-    font-size: 36px;
-    font-weight: 100;
-    font-style: italic;
-    color: #1F2937;
-}
-
-.author {
-    text-align: right;
-    padding-top: 12px;
-    font-size: 24px;
-    font-weight: 700;
-
-}
-
-#ital {
-    font-style: italic;
-}
-
-.button-section {
-    background-color: #3882F6;
-    margin: 120px 350px;
-    padding: 50px 120px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.button-title {
-    font-size: 24px;
-    font-weight: 800;
-    color:#F9FAF8;
-    padding-bottom: 2px;
-}
-
-.button-text {
-    font-size: 16px;
-    
-    color:#F9FAF8;
-}
-
-.sign-up {
-    background-color: #3882F6;
-    color: white;
+.hero-text {
     font-size: 18px;
-    font-weight: 900;
+    color:#E5E7EB;
+}
+
+.hero-right {
+    height: 300px;
+    width: auto;
+}
+
+.hero-button {
+    width: fit-content;
+}
+
+button {
+    background-color:#3882F6;
     border-radius: 8px;
-    padding: 8px 32px;
-    border: 2px solid #F9FAF8;
+    border: none;
+    color: #F9FAF8;
+    font-weight: 800;
 }
 
-.footer {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items:center;
-    height: 100px;
-    background-color: #1F2937;
-    color:#F9FAF8;
+.hero-button {
+    padding: 8px 24px;
 }
